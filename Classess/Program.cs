@@ -7,16 +7,11 @@ namespace Classess
     {
         static void Main(string[] args)
         {
-            Wave A = new Wave(2);
+            See see = new See();
             while (true)
             {
-                Console.Clear();
-                Console.WriteLine(A.Waving());
-                A.length++;
-                Thread.Sleep(500);
+                see.Tick();
             }
-            Console.WriteLine("           Hello World!");
-            Console.ReadKey();
         }
     }
 }

@@ -10,11 +10,11 @@ namespace Classess
         public int length; //stan
         public bool active;
 
-        public Wave(int _startPoint = 0)
+        public Wave(int _startPoint = 0, bool _active = true)
         {
             startPoint = _startPoint;
             length = 0;
-            active = true;
+            active = _active;
         }
 
         public string Waving()
@@ -59,10 +59,9 @@ namespace Classess
                 case 7:
                     ret = spaces + ".";
                     break;
-                default:
-                    active = false;
-                    break;
             }
+
+            if (active && length >= 8) active = false;
             
             return ret;
         }
